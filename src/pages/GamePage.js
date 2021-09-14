@@ -16,6 +16,8 @@ class GamePage extends Component {
   }
 
   componentDidMount() {
+    const { resetDispatch } = this.props;
+    resetDispatch();
     this.timerFunc();
     this.enableBtnsTimer();
   }
