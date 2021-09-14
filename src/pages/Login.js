@@ -13,10 +13,6 @@ class Login extends Component {
 
   setPlayerLocalStorage(name, email, token) {
     const { score } = this.props;
-    // let result = score;
-    // if (score === 0) {
-    //   result = '';
-    // }
     const playerObj = { player: {
       name,
       assertions: '',
@@ -31,9 +27,10 @@ class Login extends Component {
   renderInput() {
     const { loginInputsDispatch } = this.props;
     return (
-      <div>
+      <div className="input-login">
         <label htmlFor="nome">
           Usuário:
+          <br />
           <input
             type="text"
             name="nome"
@@ -44,6 +41,7 @@ class Login extends Component {
         <br />
         <label htmlFor="email">
           Email:
+          <br />
           <input
             type="text"
             name="email"
@@ -84,6 +82,7 @@ class Login extends Component {
             Configurações
           </button>
         </Link>
+        <br />
       </div>
     );
   }

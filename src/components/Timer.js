@@ -3,38 +3,12 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 class Timer extends Component {
-  // constructor(prop) {
-  //   super(prop);
-  // this.timerFunc = this.timerFunc.bind(this);
-  // }
-
-  // componentDidMount() {
-  //   this.timerFunc();
-  // }
-
-  // componentDidUpdate() {
-  //   const { timer } = this.props;
-  //   if (timer <= 0) {
-  //     clearInterval(this.setTimer);
-  //   }
-  // }
-
-  // componentWillUnmount() {
-  //   clearInterval(this.setTimer);
-  // }
-
-  // timerFunc() {
-  //   const { timerDispatch } = this.props;
-  //   const limit = 1000;
-  //   this.setTimer = setInterval(() => timerDispatch(), limit);
-  // }
-
   render() {
     const { timer } = this.props;
     return (
       <div>
         <span>
-          {timer}
+          {timer === 0 ? 'Time is over' : timer}
         </span>
       </div>
     );
